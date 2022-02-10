@@ -1,6 +1,8 @@
 
-<p>Clarusway<img align="right"
-  src="https://secure.meetupstatic.com/photos/event/3/1/b/9/600_488352729.jpeg"  width="15px"></p>
+
+chech your age here >>>> https://eminbulbul.github.io/FS10_JS_PR01_EXACT_AGE_CALCULATOR/
+
+
 
 # Project-001 : Exact_Age_Calculator (JS-01)
 
