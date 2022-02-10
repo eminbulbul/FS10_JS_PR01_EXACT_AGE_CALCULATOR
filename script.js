@@ -85,12 +85,37 @@ const updateCountdown = () => {
     let currentMinute = now.getMinutes();
     let currentSecond = now.getSeconds();
 
+
+    //if positive, no problem
     let yearOfAge = currentYear - dobYear;
     let monthOfAge = currentMonth - dobMonth;
     let dayOfAge = currentDay - dobDay;
     let hourOfAge = currentHour - dobHour;
     let minuteOfAge = currentMinute - dobMinute;
     let secondOfAge = currentSecond - dobSecond;
+
+    //this is for handle negative months
+    if (secondOfage < 0) {
+        secondOfage += 60;
+        minuteOfage--;
+    }
+    if (minuteOfage < 0) {
+        minuteOfage += 60
+        hourOfage--;
+    }
+    if (hourOfage < 0) {
+        hourOfage += 24;
+        dayOfage--;
+    }
+    if (dayOfage < 0) {
+        //homework ==> istead of 30 get previous month day
+        monthOfage--;
+        dayOfage += 30;
+    }
+    if (monthOfage < 0) {
+        yearOfage--;
+        monthOfage += 12;
+    }
 
     //Add values to DOM
 
@@ -102,4 +127,4 @@ const updateCountdown = () => {
     seconds.innerHTML = secondOfAge.toString().padStart(2, "0");
 
 
-}
+};
